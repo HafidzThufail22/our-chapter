@@ -1,22 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #E0F2FE; /* Soft Blue */
+  --foreground: #1E293B; /* Deep Navy */
 }
 
 @theme inline {
+  /* Custom Color Palette */
+  --color-soft-blue: #E0F2FE;
+  --color-ocean-blue: #0EA5E9;
+  --color-deep-navy: #1E293B;
+  --color-romantic-pink: #F472B6;
+  
+  /* Background & Foreground */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1E293B;
+    --foreground: #E0F2FE;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,3 +37,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Floating hearts animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
