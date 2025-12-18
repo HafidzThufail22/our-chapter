@@ -5,7 +5,7 @@ import { Heart, Calendar } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 // TODO: Update this date to your actual relationship start date (format: YYYY-MM-DD)
-const START_DATE = new Date('2023-05-20');
+const START_DATE = new Date('2023-10-31');
 
 interface TimeLeft {
   days: number;
